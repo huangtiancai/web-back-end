@@ -28,3 +28,7 @@
 
 
 ## [Date](https://github.com/huangtiancai/web/blob/master/CommonClass/src/com/htc/date/dateDemo.java)
+Date-java.util.Date;
+DateFormat-java.text.DateFormat;
+Locale-java.util.Locale
+SimpleDateFormat-java.text.SimpleDateFormat;
