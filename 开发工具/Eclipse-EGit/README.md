@@ -38,4 +38,7 @@ eclipse是4.4.0版的并不是最新版的，因此我的ecplise的默认JDK为J
 
 打开eclipse安装目录下的eclipse.ini添加一句：`-Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2`  就可以了。
 
-原文链接：https://blog.csdn.net/Royal__Moon/article/details/79427431
+原文链接：
+参考：
+https://www.cnblogs.com/kungfupanda/p/11161492.html
+https://blog.csdn.net/Royal__Moon/article/details/79427431
