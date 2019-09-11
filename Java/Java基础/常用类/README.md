@@ -34,11 +34,7 @@ DateFormat-java.text.DateFormat;
 Locale-java.util.Locale
 SimpleDateFormat-java.text.SimpleDateFormat;
 
-参考：
-http://c.biancheng.net/view/876.html
-http://c.biancheng.net/view/878.html
-cnblogs.com/lijingran/p/9125800.html
-https://www.jianshu.com/p/d6e391f12ab3
+
 
 总结：
 一、 相关概念
@@ -192,6 +188,11 @@ SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 System.out.println(sdf1.format(d));//2019-09-10 11:23:58
 ```
 
+参考：
+http://c.biancheng.net/view/876.html
 
+http://c.biancheng.net/view/878.html
 
+cnblogs.com/lijingran/p/9125800.html
 
+https://www.jianshu.com/p/d6e391f12ab3
