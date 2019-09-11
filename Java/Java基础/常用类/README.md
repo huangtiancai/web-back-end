@@ -22,6 +22,9 @@
 9. BigDecimal类： 一个精确运算小数的类。 BigDecimal d1 = new BigDecimal("1.2"); BigDecimal d2 = new BigDecimal("0.99"); d1.subtract(d2);//执行减法 注意：参数必须是字符串。底层实现： 字符串底层是以字符数组存储，运算时字符数组按位相减，相当于整数运算，保证了运算的精确性。
 10. 注意： 绝大部分十进制小数转换为二进制时都是无限的，所以计算机不能精确表示和存储小数。
 
+## 二、Random
+https://www.cnblogs.com/mr-wuxiansheng/p/6891693.html
+https://www.cnblogs.com/yrrAwx/p/7806444.html
 
 ## [System](https://github.com/huangtiancai/web/blob/master/CommonClass/src/com/htc/system/SystemDemo.java)
 ### 作用：System类是一些与系统相关的属性和方法的集合，位于java.lang包下
@@ -190,10 +193,14 @@ System.out.println(sdf1.format(d));//2019-09-10 11:23:58
 ```
 
 参考：
+https://www.jb51.net/article/149151.htm
+
 http://c.biancheng.net/view/876.html
 
 http://c.biancheng.net/view/878.html
 
 cnblogs.com/lijingran/p/9125800.html
+
+https://www.cnblogs.com/yutingliuyl/p/6850561.html
 
 [java8处理日期和时间](https://www.jianshu.com/p/d6e391f12ab3)
