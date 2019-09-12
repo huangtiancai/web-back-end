@@ -34,16 +34,22 @@ Random 类位于 java.util 包中，该类常用的有如下两个构造方法�
 Random()：该构造方法使用一个和当前系统时间对应的数字作为种子数，然后使用这个种子数构造 Random 对象。
 Random(long seed)：使用单个 long 类型的参数创建一个新的随机数生成器。
 ```
+//无参构造
+Random random = new Random();
 double d1 = random.nextDouble(); 	//随机生成[0, 1.0)区间的小数
-double d2 = random.nextDouble()*7;	//随机生成[0,0.7)区间的小数
+double d2 = random.nextDouble()*5;	//随机生成[0,0.5)区间的小数
+double d3 = random.nextDouble()*1.5+1;	//随机生成[1,2.5)区间的小数
 int i1 = random.nextInt();			//生成一个随机的 int 值，该值介于 int 的区间，也就是 -2的31次方~2的31次方-1
 int i2 = random.nextInt(10);		//生成[0,10)区间的整数
-int i3 = random.nextInt(10)-3;		//生成[-3,7)区间的整数
-
+int i3 = Math.abs(random.nextInt()%10);//生成[0,10)区间的整数
+int i4 = random.nextInt(10)-3;		//生成[-3,7)区间的整数
 long l1 = random.nextLong();		//生成一个随机长整型值
 boolean b1 = random.nextBoolean();	//生成一个随机的 boolean 值，生成 true 和 false 的值概率相等
 Float f1 = random.nextFloat();		//返回一个随机浮点型数字
 ```
+
+
+
 
 https://www.cnblogs.com/ningvsban/p/3590722.html
 http://c.biancheng.net/view/867.html
