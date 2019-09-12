@@ -23,11 +23,44 @@
 10. 注意： 绝大部分十进制小数转换为二进制时都是无限的，所以计算机不能精确表示和存储小数。
 
 ## 二、Random
+1. 在 java 中要生成一个指定范围之内的随机数字有两种方法：一种是调用 Math 类的 random() 方法，一种是使用 Random 类
+这里详细讲解Random 类的使用
+2. Random 类提供了丰富的随机数生成方法，可以产生 boolean、int、long、float, byte 数组以及 double 类型的随机数，
+这是它与 random() 方法最大的不同之处。random() 方法只能产生 double 类型的 0~1 的随机数。
+3. 特点：
+Random 类提供的所有方法生成的随机数字都是均匀分布的，也就是说区间内部的数字生成的概率是均等的
+### 使用：
+Random 类位于 java.util 包中，该类常用的有如下两个构造方法：
+Random()：该构造方法使用一个和当前系统时间对应的数字作为种子数，然后使用这个种子数构造 Random 对象。
+Random(long seed)：使用单个 long 类型的参数创建一个新的随机数生成器。
+```
+double d1 = random.nextDouble(); 	//随机生成[0, 1.0)区间的小数
+double d2 = random.nextDouble()*7;	//随机生成[0,0.7)区间的小数
+int i1 = random.nextInt();			//生成一个随机的 int 值，该值介于 int 的区间，也就是 -2的31次方~2的31次方-1
+int i2 = random.nextInt(10);		//生成[0,10)区间的整数
+int i3 = random.nextInt(10)-3;		//生成[-3,7)区间的整数
+
+long l1 = random.nextLong();		//生成一个随机长整型值
+boolean b1 = random.nextBoolean();	//生成一个随机的 boolean 值，生成 true 和 false 的值概率相等
+Float f1 = random.nextFloat();		//返回一个随机浮点型数字
+```
+
+https://www.cnblogs.com/ningvsban/p/3590722.html
+http://c.biancheng.net/view/867.html
 https://www.cnblogs.com/mr-wuxiansheng/p/6891693.html
 https://www.cnblogs.com/yrrAwx/p/7806444.html
 
 ## [System](https://github.com/huangtiancai/web/blob/master/CommonClass/src/com/htc/system/SystemDemo.java)
 ### 作用：System类是一些与系统相关的属性和方法的集合，位于java.lang包下
+- out-标准输出流
+- static long currentTimeMillis()  返回以毫秒为单位的当前时间
+- static void arraycopy(Object src, int srcPos, Object dest, int destPos, int length) 将指定源数组中的数组从指定位置复制到目标数组的指定位置
+参数序号	参数名称	参数类型	参数含义
+1		   src		   Object	  源数组
+2		   srcPos	   int		  源数组索引起始位置
+3		   dest	       Object	  目标数组
+4		   destPos	   int		  目标数组索引起始位置
+5		   length	   int		  复制元素个数
 
 
 
