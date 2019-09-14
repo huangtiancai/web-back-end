@@ -1,0 +1,48 @@
+﻿jdk:
+变量名：JAVA-HOME
+变量值：D:\java\j2sdk1.6.0_26_32
+
+变量名：Path
+变量值：
+D:\java\j2sdk1.5.0\bin;
+C:\Program Files (x86)\Apache Software Foundation\Tomcat 7.0_Tomcat7.0\bin;
+C:\Program Files (x86)\Common Files\Oracle\Java\javapath;
+C:\ProgramData\Oracle\Java\javapath;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;
+C:\Users\ks08pc23\AppData\Local\Programs\Python\Python36;
+D:\JDK\Java\jdk1.8.0_111\bin;
+C:\Program Files (x86)\Canon\Easy-WebPrint EX\bin;
+%JAVA_HOME%\bin;
+%JAVA_HOME%\jre\bin;
+
+变量名：CLASSPATH
+变量值：.;%JAVA_HOME%lib\dt.jar;%JAVA_HOME%lib\tools.jar;%JAVA_HOME%jre\lib\rt.jar;
+
+
+------------------------------------------------------------------------------------
+
+注意：
+path:JAVA-HOME+path
+D:\java\j2sdk1.6.0_26_32\bin;   
+D:\java\j2sdk1.6.0_26_32\jre\bin;
+等于
+JAVA-HOME:  D:\java\j2sdk1.6.0_26_32(jdk安装的路径)
+path=       .;%JAVA_HOME%\bin 
+
+------------------------------------------------------------------------------------
+加上
+JAVA-HOME:  D:\java\j2sdk1.6.0_26_32(jdk安装的路径)   注意变量值是jdk的主目录，不是bin目录，并且不要加分号
+CLASSPATH=  .;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;
+path=       .;%JAVA_HOME%\bin 
+	    
+.;%JAVA_HOME%\lib;%JAVA_HOME%\lib\tools.jar
+Q：eclipse启动报JVM terminated. Exit code=-1的解决方法？
+出现这种情况的原因应该是你的jdk和eclipse一个是32位的，一个是64位的，将两者该一致就可以了，要么都用32位的，要么都用64位的
+
+
+当前(重要)
+JAVA-HOME:          D:\java\j2sdk1.6.0_26_32
+CATALINA_HOME		D:\java\tomcat6.0.43_32
+
+CLASSPATH			.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;
+path				.;%JAVA_HOME%\bin;%CATALINA_HOME%\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;C:\Users\ks08pc23\AppData\Local\Programs\Python\Python36;C:\Program Files (x86)\Canon\Easy-WebPrint EX\bin;
+
