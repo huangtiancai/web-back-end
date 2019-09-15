@@ -48,13 +48,15 @@ boolean b1 = random.nextBoolean();	//生成一个随机的 boolean 值，生成 
 Float f1 = random.nextFloat();		//返回一个随机浮点型数字
 ```
 
-
-
-
 https://www.cnblogs.com/ningvsban/p/3590722.html
 http://c.biancheng.net/view/867.html
 https://www.cnblogs.com/mr-wuxiansheng/p/6891693.html
 https://www.cnblogs.com/yrrAwx/p/7806444.html
+
+
+## Arrays类
+
+
 
 ## [System](https://github.com/huangtiancai/web/blob/master/CommonClass/src/com/htc/system/SystemDemo.java)
 ### 作用：System类是一些与系统相关的属性和方法的集合，位于java.lang包下
