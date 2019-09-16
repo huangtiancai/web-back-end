@@ -55,8 +55,20 @@ https://www.cnblogs.com/yrrAwx/p/7806444.html
 
 
 ## Arrays类
-
-
+java.util.Arrays类是 JDK 提供的一个工具类，用来处理数组的各种方法，而且每个方法基本上都是静态方法，能直接通过类名Arrays调用
+1. 数组转集合:`Arrays.asList` => `List<String> list = Arrays.asList(name);`
+2. 集合转数组:`String[] str = list.toArray(new String[0]);`
+3. 数组转换为字符串:`String str = Arrays.toString(arr);`
+4. 排序:`sort` => `Arrays.sort(arr);`
+5. 查找元素:`binarySearch` => `int index = Arrays.binarySearch(arr, 2);` => 返回索引
+6. 拷贝元素:
+- `arraycopy`   => `System.arraycopy(Object src, int srcPos, Object dest, int destPos, int length);`
+- `copyOf`      => `Arrays.copyOf(oringinal, int newlength)`
+- `copyOfRange` => `Arrays.copyOfRange(oringinal,int from, int to)`
+7. 填充元素:`fill` => `Arrays.fill(arr, 6);`
+8. 比较数组：`equals`、`deepEquals`
+- 一维数组：`Arrays.equals(arr1, arr2)`
+- 二维数组：`Arrays.deepEquals(ar1, ar2)`
 
 ## [System](https://github.com/huangtiancai/web/blob/master/CommonClass/src/com/htc/system/SystemDemo.java)
 ### 作用：System类是一些与系统相关的属性和方法的集合，位于java.lang包下
