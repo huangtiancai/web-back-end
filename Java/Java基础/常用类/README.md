@@ -41,6 +41,7 @@ long l1 = random.nextLong();		//生成一个随机长整型值
 boolean b1 = random.nextBoolean();	//生成一个随机的 boolean 值，生成 true 和 false 的值概率相等
 Float f1 = random.nextFloat();		//返回一个随机浮点型数字
 ```
+https://www.cnblogs.com/luanyichao/p/8033848.html
 
 https://www.cnblogs.com/ningvsban/p/3590722.html
 
@@ -51,7 +52,30 @@ https://www.cnblogs.com/mr-wuxiansheng/p/6891693.html
 https://www.cnblogs.com/yrrAwx/p/7806444.html
 
 
-## 三、Arrays类
+## 三、String类
+1. Java中有八种基本类型，都是Java语言预先定义好的，并且是关键字
+2. 这八种基本类型分别是：
+   整型：byte,short,int,long;
+   浮点型：double,float
+   布尔型:boolean
+   字符型:char
+3. String类型:Immutable
+- String类型其实并不是基本类型，但是它是如此广泛的被使用，常常被误以为是一种基本类型。
+- 字符串即字符的组合，在Java中，`字符串是一个类`，所以我们见到的`字符串都是对象` => Java 提供了 String 类来创建和操作字符串
+常见创建字符串手段：
+- 每当有一个字面值出现的时候，虚拟机就会创建一个字符串
+- 调用String的构造方法创建一个字符串对象
+- 通过+加号进行字符串拼接也会创建新的字符串对象
+
+
+
+## 四、StringBuilder和StringBuffer类
+1. StringBuilder和StringBuffer类的用法完全一样
+
+
+
+
+## 五、Arrays类
 java.util.Arrays类是 JDK 提供的一个工具类，用来处理数组的各种方法，而且每个方法基本上都是静态方法，能直接通过类名Arrays调用
 1. 数组转集合:`Arrays.asList` => `List<String> list = Arrays.asList(name);`
 2. 集合转数组:`String[] str = list.toArray(new String[0]);`
@@ -67,7 +91,7 @@ java.util.Arrays类是 JDK 提供的一个工具类，用来处理数组的各�
 - 一维数组：`Arrays.equals(arr1, arr2)`
 - 二维数组：`Arrays.deepEquals(ar1, ar2)`
 
-## [四、System类](https://github.com/huangtiancai/web/blob/master/CommonClass/src/com/htc/system/SystemDemo.java)
+## [六、System类](https://github.com/huangtiancai/web/blob/master/CommonClass/src/com/htc/system/SystemDemo.java)
 ### 作用：System类是一些与系统相关的属性和方法的集合，位于java.lang包下
 - out-标准输出流
 - static long currentTimeMillis()  返回以毫秒为单位的当前时间
@@ -80,7 +104,7 @@ java.util.Arrays类是 JDK 提供的一个工具类，用来处理数组的各�
 5		   length	   int		  复制元素个数
 
 
-## [五、Date类](https://github.com/huangtiancai/web/blob/master/CommonClass/src/com/htc/date/dateDemo.java)
+## [七、Date类](https://github.com/huangtiancai/web/blob/master/CommonClass/src/com/htc/date/dateDemo.java)
 Date-java.util.Date;
 Calendar-java.util.Calendar;
 DateFormat-java.text.DateFormat;
@@ -123,7 +147,7 @@ boolean before(Date when) 判断此日期是否在指定日期之前
 boolean equals(Object obj) 比较两个日期的相等性
 int compareTo(Date anotherDate)	比较两个日期的顺序
 
-## 六、Calendar类
+## 八、Calendar类
 1. 作用
 Calendar 类是一个抽象类，它为特定瞬间与 YEAR、MONTH、DAY_OF—MONTH、HOUR 等日历字段之间的转换提供了一些方法，并为操作日历字段（如获得下星期的日期） 提供了一些方法。
 
@@ -159,7 +183,7 @@ void set(int year, int month, int date, int hourOfDay, int minute);
 void set(int year, int month, int date, int hourOfDay, int minute, int second);
 5)void add(int field, int amount)	根据日历的规则，为给定的日历字段 field 添加或减去指定的时间量 amount
 
-## 七、DateFormat类
+## 九、DateFormat类
 获取当前日期对象后需要格式化
 ```
 // 获取当前日期对象
@@ -220,7 +244,7 @@ Date d = df.parse(s);
 System.out.println(d);//Wed Sep 11 13:42:44 CST 2019
 ```
 
-六、SimpleDateFormat 类
+## 十、SimpleDateFormat 类
 1. 如果使用 DateFormat 类格式化日期/时间并不能满足要求,那么就需要使用 DateFormat 类的子类——SimpleDateFormat。
 2. SimpleDateFormat 是一个以与语言环境有关的方式来格式化和解析日期的具体类，它允许进行格式化（日期→文本）、解析（文本→日期）和规范化。       SimpleDateFormat 使得可以选择任何用户定义的日期/时间格式的模式。
 ### 使用步骤：
@@ -240,7 +264,7 @@ System.out.println(sdf1.format(d));//2019-09-10 11:23:58
 ```
 
 
-## 八、BigDecimal类
+## 十一、BigDecimal类
 
 
 
