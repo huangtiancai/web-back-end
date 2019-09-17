@@ -43,8 +43,11 @@ Float f1 = random.nextFloat();		//返回一个随机浮点型数字
 ```
 
 https://www.cnblogs.com/ningvsban/p/3590722.html
+
 http://c.biancheng.net/view/867.html
+
 https://www.cnblogs.com/mr-wuxiansheng/p/6891693.html
+
 https://www.cnblogs.com/yrrAwx/p/7806444.html
 
 
