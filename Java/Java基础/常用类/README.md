@@ -280,3 +280,6 @@ cnblogs.com/lijingran/p/9125800.html
 https://www.cnblogs.com/yutingliuyl/p/6850561.html
 
 [java8处理日期和时间](https://www.jianshu.com/p/d6e391f12ab3)
+
+UUID
+MD5
