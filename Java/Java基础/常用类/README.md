@@ -1,3 +1,21 @@
+# Java 修饰符
+Java语言提供了很多修饰符，主要分为以下两类：
+- 访问修饰符：default、private、public、protected
+- 非访问修饰符:static、static、abstract、synchronized、volatile等
+
+## static关键字
+参考：
+https://www.runoob.com/java/java-modifier-types.html
+https://www.cnblogs.com/zuotongbin/p/11087029.html
+
+
+static 修饰符，用来修饰类方法和类变量。
+
+
+
+## final关键字
+
+## 常用类
 ## 一、Math
 
 ### 概述
@@ -64,14 +82,51 @@ https://www.cnblogs.com/yrrAwx/p/7806444.html
 - 字符串即字符的组合，在Java中，`字符串是一个类`，所以我们见到的`字符串都是对象` => Java 提供了 String 类来创建和操作字符串
 常见创建字符串手段：
 - 每当有一个字面值出现的时候，虚拟机就会创建一个字符串
-- 调用String的构造方法创建一个字符串对象
+- 调用String的构造方法创建一个字符串对象（构造方法参数不同）
 - 通过+加号进行字符串拼接也会创建新的字符串对象
+4. final => String 被修饰为final(public final class String),所以是不能被继承的
+5. String类的常用方法:
+- 操作字符串
+    * length
+    * indexOf
+    * lastindexOf
+    * charAt
+    * subString
+    * split
+    * concat
+    * trim
+    * toUpperCase、toLowerCase
+    * replaceAll、replaceFirst
+    * startWith、endWith
+    * 静态方法：valueOf
+- 比较字符串
+	* equals
+	* equalsIgnoreCase
+6. length属性、length()方法和size()的方法的区别
+	 * 1.length属性是针对Java中的数组来说的，要求数组的长度可以用其length属性；
+	 * 2.length()方法是针对字符串来说的，要求一个字符串的长度就要用到它的length()方法；
+	 * 3.java中的size()方法是针对泛型集合说的,如果想看这个泛型有多少个元素,就调用此方法来查看
+
+
+参考：
+[StirngUtils工具类](https://blog.csdn.net/diypp2012/article/details/82971716)
+
+https://www.jianshu.com/p/afbfc640530d
 
 
 
 ## 四、StringBuilder和StringBuffer类
 1. StringBuilder和StringBuffer类的用法完全一样
-
+2. 作用:可变字符串对象
+3. 创建：
+- StringBuffer str = new StringBuffer();
+- StringBuffer str = new StringBuffer("hello");
+4. 常用方法：
+    * append追加
+    * delete 删除
+    * deleteCharAt
+    * insert 插入
+    * reverse 反转
 
 
 
