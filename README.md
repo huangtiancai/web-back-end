@@ -1,10 +1,26 @@
+[Linux](#Linux)
+[开发工具](#开发工具)
 [Java](#Java)
 [数据库](#数据库)
 [Redis](Redis)
 [JavaEE](#JavaEE)
 [核心框架](#核心框架)
 [Maven](#Maven)
-[Linux](#Linux)
+
+
+# 开发工具
+- 安装
+- 项目工程管理
+- [Chrome浏览器](./开发工具/Chrome浏览器/01-Chrome浏览器.md)
+
+# Linux
+- 主要特征
+- 分类
+- 使用前的准备
+- 目录划分
+- Linux常用命令
+- Linux中的工具安装
+- 常用DOS命令
 
 # Java
 
@@ -90,20 +106,6 @@
 - 生命周期及相关命令
 - 私服
 
-# Linux
-- 主要特征
-- 分类
-- 使用前的准备
-- 目录划分
-- Linux常用命令
-- Linux中的工具安装
-- 常用DOS命令
-
-
-# 开发工具
-- 安装
-- 项目工程管理
-- [Chrome浏览器](./开发工具/Chrome浏览器/01-Chrome浏览器.md)
 
 
 # 数据结构&算法&设计模式
