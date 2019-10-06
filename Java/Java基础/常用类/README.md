@@ -1,3 +1,21 @@
+# Java 修饰符
+Java语言提供了很多修饰符，主要分为以下两类：
+- 访问修饰符：default、private、public、protected
+- 非访问修饰符:static、static、abstract、synchronized、volatile等
+
+## static关键字
+参考：
+https://www.runoob.com/java/java-modifier-types.html
+https://www.cnblogs.com/zuotongbin/p/11087029.html
+
+
+static 修饰符，用来修饰类方法和类变量。
+
+
+
+## final关键字
+
+## 常用类
 ## 一、Math
 
 ### 概述
@@ -13,14 +31,8 @@
 2. floor() : 向下取整。 返回都变了类型的值。
 3. round() : 四舍五入。返回long类型的值
 4. random() : 返回一个 [0,1) 的随机小数 eg ： 获取一个30~50之间的随机整数 Int i = (int)(Math.random*21 +30);
-
 4. max（Int arg,int arg2） : 返回最大值。
 5. min() : 返回最小值。
-6. pow(int arg1,int arg2) : 求第一个参数的第二个参数次幂。
-
-8. strictfp方法修饰符 ： 要求小数在运算过程中以80位 二进制来算，但是最后仍然以64位存放结果； 小数在计算机中不能精确存储，doouble 在计算机中是以64位 二进制存储和运算。
-9. BigDecimal类： 一个精确运算小数的类。 BigDecimal d1 = new BigDecimal("1.2"); BigDecimal d2 = new BigDecimal("0.99"); d1.subtract(d2);//执行减法 注意：参数必须是字符串。底层实现： 字符串底层是以字符数组存储，运算时字符数组按位相减，相当于整数运算，保证了运算的精确性。
-10. 注意： 绝大部分十进制小数转换为二进制时都是无限的，所以计算机不能精确表示和存储小数。
 
 ## 二、Random
 1. 在 java 中要生成一个指定范围之内的随机数字有两种方法：一种是调用 Math 类的 random() 方法，一种是使用 Random 类
@@ -47,16 +59,94 @@ long l1 = random.nextLong();		//生成一个随机长整型值
 boolean b1 = random.nextBoolean();	//生成一个随机的 boolean 值，生成 true 和 false 的值概率相等
 Float f1 = random.nextFloat();		//返回一个随机浮点型数字
 ```
-
-
-
+https://www.cnblogs.com/luanyichao/p/8033848.html
 
 https://www.cnblogs.com/ningvsban/p/3590722.html
+
 http://c.biancheng.net/view/867.html
+
 https://www.cnblogs.com/mr-wuxiansheng/p/6891693.html
+
 https://www.cnblogs.com/yrrAwx/p/7806444.html
 
-## [System](https://github.com/huangtiancai/web/blob/master/CommonClass/src/com/htc/system/SystemDemo.java)
+
+## 三、String类
+1. Java中有八种基本类型，都是Java语言预先定义好的，并且是关键字
+2. 这八种基本类型分别是：
+   整型：byte,short,int,long;
+   浮点型：double,float
+   布尔型:boolean
+   字符型:char
+3. String类型:Immutable
+- String类型其实并不是基本类型，但是它是如此广泛的被使用，常常被误以为是一种基本类型。
+- 字符串即字符的组合，在Java中，`字符串是一个类`，所以我们见到的`字符串都是对象` => Java 提供了 String 类来创建和操作字符串
+常见创建字符串手段：
+- 每当有一个字面值出现的时候，虚拟机就会创建一个字符串
+- 调用String的构造方法创建一个字符串对象（构造方法参数不同）
+- 通过+加号进行字符串拼接也会创建新的字符串对象
+4. final => String 被修饰为final(public final class String),所以是不能被继承的
+5. String类的常用方法:
+- 操作字符串
+    * length
+    * indexOf
+    * lastindexOf
+    * charAt
+    * subString
+    * split
+    * concat
+    * trim
+    * toUpperCase、toLowerCase
+    * replaceAll、replaceFirst
+    * startWith、endWith
+    * 静态方法：valueOf
+- 比较字符串
+	* equals
+	* equalsIgnoreCase
+6. length属性、length()方法和size()的方法的区别
+	 * 1.length属性是针对Java中的数组来说的，要求数组的长度可以用其length属性；
+	 * 2.length()方法是针对字符串来说的，要求一个字符串的长度就要用到它的length()方法；
+	 * 3.java中的size()方法是针对泛型集合说的,如果想看这个泛型有多少个元素,就调用此方法来查看
+
+
+参考：
+[StirngUtils工具类](https://blog.csdn.net/diypp2012/article/details/82971716)
+
+https://www.jianshu.com/p/afbfc640530d
+
+
+
+## 四、StringBuilder和StringBuffer类
+1. StringBuilder和StringBuffer类的用法完全一样
+2. 作用:可变字符串对象
+3. 创建：
+- StringBuffer str = new StringBuffer();
+- StringBuffer str = new StringBuffer("hello");
+4. 常用方法：
+    * append追加
+    * delete 删除
+    * deleteCharAt
+    * insert 插入
+    * reverse 反转
+
+
+
+## 五、Arrays类
+java.util.Arrays类是 JDK 提供的一个工具类，用来处理数组的各种方法，而且每个方法基本上都是静态方法，能直接通过类名Arrays调用
+1. 数组转集合:`Arrays.asList` => `List<String> list = Arrays.asList(name);`
+2. 集合转数组:`String[] str = list.toArray(new String[0]);`
+3. 数组转换为字符串:`String str = Arrays.toString(arr);`
+4. 排序:`sort` => `Arrays.sort(arr);`
+5. 查找元素:`binarySearch` => `int index = Arrays.binarySearch(arr, 2);` => 返回索引
+6. 拷贝元素:
+- `arraycopy`   => `System.arraycopy(Object src, int srcPos, Object dest, int destPos, int length);`
+- `copyOf`      => `Arrays.copyOf(oringinal, int newlength)`
+- `copyOfRange` => `Arrays.copyOfRange(oringinal,int from, int to)`
+7. 填充元素:`fill` => `Arrays.fill(arr, 6);`
+8. 比较数组：`equals`、`deepEquals`
+- 一维数组：`Arrays.equals(arr1, arr2)`
+- 二维数组：`Arrays.deepEquals(ar1, ar2)`
+
+## [六、System类](https://github.com/huangtiancai/web/blob/master/CommonClass/src/com/htc/system/SystemDemo.java)
 ### 作用：System类是一些与系统相关的属性和方法的集合，位于java.lang包下
 - out-标准输出流
 - static long currentTimeMillis()  返回以毫秒为单位的当前时间
@@ -69,17 +159,14 @@ https://www.cnblogs.com/yrrAwx/p/7806444.html
 5		   length	   int		  复制元素个数
 
 
-
-## [Date](https://github.com/huangtiancai/web/blob/master/CommonClass/src/com/htc/date/dateDemo.java)
+## [七、Date类](https://github.com/huangtiancai/web/blob/master/CommonClass/src/com/htc/date/dateDemo.java)
 Date-java.util.Date;
 Calendar-java.util.Calendar;
 DateFormat-java.text.DateFormat;
 Locale-java.util.Locale
 SimpleDateFormat-java.text.SimpleDateFormat;
 
-
-
-总结：
+Date类的总结：
 一、 相关概念
 1. 所有的数据类型，无论是整数，布尔，浮点数还是字符串，最后都需要以数字的形式表现出来=>日期类型也不例外，换句话说，一个日期，比如2020年10月1日，在计算机里，会用一个数字来代替
 2. 最特殊的一个数字，就是零. 零这个数字，就代表Java中的时间原点=>对应日期：`日期是1970年1月1日 8点0分0秒`
@@ -115,7 +202,7 @@ boolean before(Date when) 判断此日期是否在指定日期之前
 boolean equals(Object obj) 比较两个日期的相等性
 int compareTo(Date anotherDate)	比较两个日期的顺序
 
-四、Calendar类
+## 八、Calendar类
 1. 作用
 Calendar 类是一个抽象类，它为特定瞬间与 YEAR、MONTH、DAY_OF—MONTH、HOUR 等日历字段之间的转换提供了一些方法，并为操作日历字段（如获得下星期的日期） 提供了一些方法。
 
@@ -151,7 +238,7 @@ void set(int year, int month, int date, int hourOfDay, int minute);
 void set(int year, int month, int date, int hourOfDay, int minute, int second);
 5)void add(int field, int amount)	根据日历的规则，为给定的日历字段 field 添加或减去指定的时间量 amount
 
-五、DateFormat类
+## 九、DateFormat类
 获取当前日期对象后需要格式化
 ```
 // 获取当前日期对象
@@ -212,7 +299,7 @@ Date d = df.parse(s);
 System.out.println(d);//Wed Sep 11 13:42:44 CST 2019
 ```
 
-六、SimpleDateFormat 类
+## 十、SimpleDateFormat 类
 1. 如果使用 DateFormat 类格式化日期/时间并不能满足要求,那么就需要使用 DateFormat 类的子类——SimpleDateFormat。
 2. SimpleDateFormat 是一个以与语言环境有关的方式来格式化和解析日期的具体类，它允许进行格式化（日期→文本）、解析（文本→日期）和规范化。       SimpleDateFormat 使得可以选择任何用户定义的日期/时间格式的模式。
 ### 使用步骤：
@@ -231,6 +318,11 @@ SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 System.out.println(sdf1.format(d));//2019-09-10 11:23:58
 ```
 
+
+## 十一、BigDecimal类
+
+
+
 参考：
 https://www.jb51.net/article/149151.htm
 
@@ -243,3 +335,6 @@ cnblogs.com/lijingran/p/9125800.html
 https://www.cnblogs.com/yutingliuyl/p/6850561.html
 
 [java8处理日期和时间](https://www.jianshu.com/p/d6e391f12ab3)
+
+UUID
+MD5

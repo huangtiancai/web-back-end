@@ -1,7 +1,9 @@
 本文总结了Eclipse常用快捷键。分享给大家供大家参考，具体如下：
 ### 1.几个最重要的快捷键
+设置快捷键:preferences/General/keys
 Shift+Enter:快速换行
 Alt+Down:快速复制到下一行
+
 
 下面的快捷键需要一个个验证：
 - 代码助手:Ctrl+Space（简体中文操作系统是Alt+/）
