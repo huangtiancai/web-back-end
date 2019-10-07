@@ -1,5 +1,5 @@
-[Linux](#Linux)
 [开发环境](#开发环境)
+[Linux](#Linux)
 [Java](#Java)
 [数据库](#数据库)
 [Redis](Redis)
@@ -66,7 +66,7 @@
 ## JDBC
 ## 数据库的优化调优
 
-# Redis
+## Redis
 - NoSQL
 - Redis的特点
 - Redis的启动和停止
@@ -90,6 +90,7 @@
 
 
 # 核心框架
+## ORM
 ## Spring 
 ## Mybatis
 ## SpringMVC
