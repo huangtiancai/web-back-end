@@ -1,5 +1,5 @@
 [Linux](#Linux)
-[开发工具](#开发工具)
+[开发环境](#开发环境)
 [Java](#Java)
 [数据库](#数据库)
 [Redis](Redis)
@@ -8,19 +8,21 @@
 [Maven](#Maven)
 
 
-# 开发工具
-- 安装
-- 项目工程管理
+# 开发环境
+- Eclipse
+- IDEA
+- JDK、tomcat、maven
 - [Chrome浏览器](./开发工具/Chrome浏览器/01-Chrome浏览器.md)
 
 # Linux
+- 系统命令概述
 - 主要特征
 - 分类
 - 使用前的准备
 - 目录划分
 - Linux常用命令
 - Linux中的工具安装
-- 常用DOS命令
+- [常用DOS命令](./Linux/常用DOS命令/README.md)
 
 # Java
 
