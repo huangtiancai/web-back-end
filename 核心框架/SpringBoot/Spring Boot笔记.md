@@ -5,24 +5,18 @@
 > 简化Spring应用开发的一个框架；
 >
 > 整个Spring技术栈的一个大整合；
->- SPRING BOOT
->- SPRING FRAMEWORK - IOC容器
->- SPRING DATA      - 数据访问（SQL/NOSQL）
->- SPRING CLOUD     - 分布式
->- SPRING SECURITY  - 安全权限控制
->- ....
+>
 > J2EE开发的一站式解决方案；
 
 ## 2、微服务
 
-2014，martin fowler
+2014，  martin fowler
 
-微服务：架构风格（服务微化）
+微服务=>架构风格（服务微化）
 
 一个应用应该是一组小型服务；可以通过HTTP的方式进行互通；
 
 单体应用：ALL IN ONE
-
 微服务：每一个功能元素最终都是一个可独立替换和独立升级的软件单元；
 
 [详细参照微服务文档](https://martinfowler.com/articles/microservices.html#MicroservicesAndSoa)
@@ -41,7 +35,7 @@ http://www.gulixueyuan.com/ 谷粒学院
 
 –IntelliJIDEA2017：IntelliJ IDEA 2017.2.2 x64、STS
 
-–SpringBoot 1.5.9.RELEASE：1.5.9；
+–SpringBoot 1.5.9.RELEASE：1.5.9；后面版本有区别
 
 统一环境；
 
