@@ -24,7 +24,8 @@ spring就将SpringBoot作为微服务的载体（承载单个服务的载体）�
 2.多种语言
 
 ### spring进一步改进
-hibernate => Spring Data JPA
+hibernate => Spring Data JPA 
+
 
 
 
