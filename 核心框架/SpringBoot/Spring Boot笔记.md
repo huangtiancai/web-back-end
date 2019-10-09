@@ -146,8 +146,13 @@ public class HelloController {
         </plugins>
     </build>
 ```
-
-将这个应用打成jar包，直接使用java -jar的命令进行执行；
+侧边栏打开maven => 生命周期 => Lifeccle => package => 打完的包放在target目录下：spring-boot-01-helloworld-1.0-SNAPSHOT.jar
+=> 复制出来，在jar文件目录下,直接使用java -jar的命令进行执行；
+java -jar spring-boot-01-helloworld-1.0-SNAPSHOT.jar
+>注意：即使目标服务器没有安装tomcat环境，jar包自带tomcat环境
+>打开jar文件的目录：
+>C:\.....\spring-boot-01-helloworld-1.0-SNAPSHOT.jar\BOOT-INF\lib\
+>导SpringBoot依赖时导进的jar包，包括嵌入式的tomcat => 打包携都带上了tomcat服务器
 
 ## 5、Hello World探究
 
