@@ -330,10 +330,6 @@ IDE都支持使用Spring的项目创建向导快速创建一个Spring Boot项目
 
 >参考：https://blog.csdn.net/zhoukikoo/article/details/80532483
 
-
-
-
-
 ### 2、STS使用 Spring Starter Project快速创建项目
 
 
@@ -531,16 +527,16 @@ public class Person {
 |            | @ConfigurationProperties | @Value |
 | ---------- | ------------------------ | ------ |
 | 功能         | 批量注入配置文件中的属性             | 一个个指定  |
-| 松散绑定（松散语法） | 支持                       | 不支持    |
+| 松散绑定（松散语法） | 支持                      | 不支持    |
 | SpEL       | 不支持                      | 支持     |
 | JSR303数据校验 | 支持                       | 不支持    |
 | 复杂类型封装     | 支持                       | 不支持    |
 
 配置文件yml还是properties他们都能获取到值；
 
-如果说，我们只是在某个业务逻辑中需要获取一下配置文件中的某项值，使用@Value；
+如果说，我们只是在某个业务逻辑中需要获取一下配置文件中的某项值，使用`@Value`；
 
-如果说，我们专门编写了一个javaBean来和配置文件进行映射，我们就直接使用@ConfigurationProperties；
+如果说，我们专门编写了一个javaBean来和配置文件进行映射，我们就直接使用`@ConfigurationProperties`；
 
 
 
