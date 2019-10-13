@@ -3,7 +3,6 @@
 - 不是程序本身，可以对程序作出解释
 - 可以被其他程序（比如：编译器等）读取（注解 => 信息处理流程）
 ### Annotation的格式
-
 ### Annotation在哪里使用？
 - 可以附加在package、class、method、field等上面，相当于给他们添加了额外的辅助信息
  
@@ -23,4 +22,11 @@ java.lang.annotation包：
 - @Documneted
 - @Inherited
 
+### 元注解
+元注解负责注解其他注解，被用来提供对其它Annotation类型作说明
+java.lang.annotation包：
+- @Target
+- @Retention
+- @Documneted
+- @Inherited
 
