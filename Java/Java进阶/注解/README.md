@@ -22,11 +22,5 @@ java.lang.annotation包：
 - @Documneted
 - @Inherited
 
-### 元注解
-元注解负责注解其他注解，被用来提供对其它Annotation类型作说明
-java.lang.annotation包：
-- @Target
-- @Retention
-- @Documneted
-- @Inherited
+### 
 
