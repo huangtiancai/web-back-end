@@ -134,7 +134,8 @@ public class HelloController {
 ### 5、运行主程序测试
 
 ### 6、简化部署
-
+SpringBoot 部署会采用两种方式：全部打成jar包，或者全部打成war包
+#### 打成jar包
 ```xml
  <!-- 这个插件，可以将应用打包成一个可执行的jar包；-->
     <build>
@@ -146,13 +147,25 @@ public class HelloController {
         </plugins>
     </build>
 ```
-侧边栏打开maven => 生命周期 => Lifeccle => package => 打完的包放在target目录下：spring-boot-01-helloworld-1.0-SNAPSHOT.jar
-=> 复制出来，在jar文件目录下,直接使用java -jar的命令进行执行；
-java -jar spring-boot-01-helloworld-1.0-SNAPSHOT.jar
+- IDEA侧边栏打开maven    
+=> 生命周期 
+=> Lifeccle
+=> package 
+=> 打完的包会在target目录下生成：`spring-boot-01-helloworld-1.0-SNAPSHOT.jar`
+- 复制出来，在jar文件目录下,直接使用java -jar的命令进行执行；
+`java -jar spring-boot-01-helloworld-1.0-SNAPSHOT.jar`
 >注意：即使目标服务器没有安装tomcat环境，jar包自带tomcat环境
 >打开jar文件的目录：
 >C:\.....\spring-boot-01-helloworld-1.0-SNAPSHOT.jar\BOOT-INF\lib\
 >导SpringBoot依赖时导进的jar包，包括嵌入式的tomcat => 打包携都带上了tomcat服务器
+
+
+#### 打成war包
+后续再总结
+
+
+#### idea工具maven生命周期clean,install,package等区别
+
 
 ## 5、Hello World探究
 
@@ -307,6 +320,19 @@ IDE都支持使用Spring的项目创建向导快速创建一个Spring Boot项目
   - static：保存所有的静态资源； js css  images；
   - templates：保存所有的模板页面；（Spring Boot默认jar包使用嵌入式的Tomcat，默认不支持JSP页面）；可以使用模板引擎（freemarker、thymeleaf）；
   - application.properties：Spring Boot应用的配置文件；可以修改一些默认设置；
+
+>注意：启动项目时遇到的额问题
+`1.java.lang.UnsatisfiedLinkError: C:\java\apache-tomcat-7.0.90\bin\tcnative-1.dll: Can't load IA 32-bit .dll on a AMD 64-bit platform`
+
+>catalina version  查看tomcat的版本 替换正确的tomca版本=>64位
+
+>`2.An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]`
+
+>参考：https://blog.csdn.net/zhoukikoo/article/details/80532483
+
+
+
+
 
 ### 2、STS使用 Spring Starter Project快速创建项目
 
