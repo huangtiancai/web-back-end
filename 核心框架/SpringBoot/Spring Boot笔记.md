@@ -635,7 +635,6 @@ Spring Boot里面没有Spring的配置文件，我们自己编写的配置文件
     <bean id="helloService" class="com.atguigu.springboot.service.HelloService"></bean>
 </beans>
 ```
-
 SpringBoot推荐给容器中添加组件的方式；推荐使用全注解的方式
 
 1、配置类**@Configuration**------>Spring配置文件
