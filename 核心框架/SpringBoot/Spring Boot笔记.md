@@ -692,9 +692,19 @@ person.dog.age=15
 
 ### 1、多Profile文件
 
-我们在主配置文件编写的时候，文件名可以是   application-{profile}.properties/yml
+我们在主配置文件编写的时候，文件名可以是:`application-{profile}.properties/yml`
 
-默认使用application.properties的配置；
+默认使用`application.properties`的配置；
+
+`application.properties`
+`application-dev.properties`
+`application-prod.properties`
+
+```xml
+#在默认配置文件中指定要激活哪个配置
+#激活指定application-xxx.properties
+spring.profiles.active=dev
+```
 
 
 
@@ -725,37 +735,26 @@ spring:
 
 
 
-
-
 ### 3、激活指定profile
 
 ​	1、在配置文件中指定  spring.profiles.active=dev
-
-​	2、命令行：
-
-​		java -jar spring-boot-02-config-0.0.1-SNAPSHOT.jar --spring.profiles.active=dev；
-
-​		可以直接在测试的时候，配置传入命令行参数
+​	2、命令行：`java -jar spring-boot-02-config-0.0.1-SNAPSHOT.jar --spring.profiles.active=dev`
+可以直接在测试的时候，配置传入命令行参数
 
 ​	3、虚拟机参数；
-
-​		-Dspring.profiles.active=dev
+​	`-Dspring.profiles.active=dev`
 
 
 
 ## 6、配置文件加载位置
 
 springboot 启动会扫描以下位置的application.properties或者application.yml文件作为Spring boot的默认配置文件
-
-–file:./config/
-
+>–file:./config/
 –file:./
-
 –classpath:/config/
-
 –classpath:/
 
-优先级由高到底，高优先级的配置会覆盖低优先级的配置；
+优先级**由高到底**，高优先级的配置会**覆盖**低优先级的配置；
 
 SpringBoot会从这四个位置全部加载主配置文件；**互补配置**；
 
@@ -775,7 +774,7 @@ java -jar spring-boot-02-config-02-0.0.1-SNAPSHOT.jar --spring.config.location=G
 
 所有的配置都可以在命令行上进行指定
 
-java -jar spring-boot-02-config-02-0.0.1-SNAPSHOT.jar --server.port=8087  --server.context-path=/abc
+`java -jar spring-boot-02-config-02-0.0.1-SNAPSHOT.jar --server.port=8087  --server.context-path=/abc`
 
 多个配置用空格分开； --配置项=值
 
@@ -1164,7 +1163,7 @@ public class HelloWorld {
 
 a（slf4j+logback）: Spring（commons-logging）、Hibernate（jboss-logging）、MyBatis、xxxx
 
-统一日志记录，即使是别的框架和我一起统一使用slf4j进行输出？
+**统一日志记录**，即使是别的框架和我一起统一使用slf4j进行输出？
 
 ![](images/legacy.png)
 
@@ -1552,7 +1551,7 @@ localhost:8080/webjars/jquery/3.3.1/jquery.js
 "/"：当前项目的根路径
 ```
 
-localhost:8080/abc ===  去静态资源文件夹里面找abc
+localhost:8080/abc 访问当前项目下的任何东西，如访问abc，没有处理的话 => 去类路径下的静态资源文件夹里面找abc
 
 ==3）、欢迎页； 静态资源文件夹下的所有index.html页面；被"/**"映射；==
 
