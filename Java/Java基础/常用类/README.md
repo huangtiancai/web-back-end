@@ -10,7 +10,8 @@ https://www.runoob.com/java/java-modifier-types.html
 https://www.cnblogs.com/zuotongbin/p/11087029.html
 
 
-static 修饰符，用来修饰类方法和类变量。
+static 修饰符，用来修饰类方法和类变量
+
 
 
 
