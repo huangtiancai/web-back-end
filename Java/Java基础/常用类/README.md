@@ -4,6 +4,7 @@ Java语言提供了很多修饰符，主要分为以下两类：
 - 非访问修饰符:static、static、abstract、synchronized、volatile等
 
 ## static关键字
+
 参考：
 https://www.runoob.com/java/java-modifier-types.html
 https://www.cnblogs.com/zuotongbin/p/11087029.html
@@ -16,6 +17,7 @@ static 修饰符，用来修饰类方法和类变量。
 ## final关键字
 
 ## 常用类
+
 ## 一、Math
 
 ### 概述
@@ -151,12 +153,12 @@ java.util.Arrays类是 JDK 提供的一个工具类，用来处理数组的各�
 - out-标准输出流
 - static long currentTimeMillis()  返回以毫秒为单位的当前时间
 - static void arraycopy(Object src, int srcPos, Object dest, int destPos, int length) 将指定源数组中的数组从指定位置复制到目标数组的指定位置
-参数序号	参数名称	参数类型	参数含义
-1		   src		   Object	  源数组
-2		   srcPos	   int		  源数组索引起始位置
-3		   dest	       Object	  目标数组
-4		   destPos	   int		  目标数组索引起始位置
-5		   length	   int		  复制元素个数
+	参数序号	参数名称	参数类型	参数含义
+	1		   src		   Object	  源数组
+	2		   srcPos	   int		  源数组索引起始位置
+	3		   dest	       Object	  目标数组
+	4		   destPos	   int		  目标数组索引起始位置
+	5		   length	   int		  复制元素个数
 
 
 ## [七、Date类](https://github.com/huangtiancai/web/blob/master/CommonClass/src/com/htc/date/dateDemo.java)
@@ -200,7 +202,7 @@ void setTime(long time) 设置此 Date对象以表示1970年1月1日00:00:00 GMT
 boolean after(Date when) 判断此日期是否在指定日期之后
 boolean before(Date when) 判断此日期是否在指定日期之前
 boolean equals(Object obj) 比较两个日期的相等性
-int compareTo(Date anotherDate)	比较两个日期的顺序
+	int compareTo(Date anotherDate)	比较两个日期的顺序
 
 ## 八、Calendar类
 1. 作用
@@ -230,13 +232,13 @@ Date date = c.getTime();
 5. Calendar 对象中的一些方法:
 1)Date getTime()        由日历对象返回日期对象
 2)setTime(Date date)    使用给定的 Date设置此日历的时间
-3)int get(int field)	返回指定日历字段的值 => `int year = c.get(Calendar.YEAR);` Calendar 对象调用 get() 方法可以获取有关年、月、日等时间信息，参数 field 的有效值由 Calendar 静态常量指定。
+	3)int get(int field)	返回指定日历字段的值 => `int year = c.get(Calendar.YEAR);` Calendar 对象调用 get() 方法可以获取有关年、月、日等时间信息，参数 field 的有效值由 Calendar 静态常量指定。
 4)set(..)方法
 void set(int field, int value)为指定的日历字段设置给定值
 void set(int year, int month, int date);
 void set(int year, int month, int date, int hourOfDay, int minute);
 void set(int year, int month, int date, int hourOfDay, int minute, int second);
-5)void add(int field, int amount)	根据日历的规则，为给定的日历字段 field 添加或减去指定的时间量 amount
+	5)void add(int field, int amount)	根据日历的规则，为给定的日历字段 field 添加或减去指定的时间量 amount
 
 ## 九、DateFormat类
 获取当前日期对象后需要格式化
